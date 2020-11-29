@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- add shortcut icon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://cdn.glitch.com/f34cec6d-08ca-4b57-98f6-7f24d91b765c%2Fwhatsapp_image_2020_11_29_at_09_41_46_7Xt_icon.ico?v=1606649983142"
+      sizes="16x16"
+    />
+    <!-- add font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Cookie"
+      rel="stylesheet"
+    />
+    <!--add javascript-->
+
+    <script async src="./index.js"></script>
+
+    <title>Virtual Office</title>
+    <!-- link for icons -->
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+
+    <!-- contact us container -->
+    <style>
+      .container {
+        position: relative;
+      }
+
+      .vertical-center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- add logo-->
+      <img
+        src="https://cdn.glitch.com/f34cec6d-08ca-4b57-98f6-7f24d91b765c%2FWhatsApp%20Image%202020-11-29%20at%2009.05.03.jpeg?v=1606650013438"
+      />
+
+      <!-- add date and time -->
+
+      <p id="date"></p>
+
+      <script>
+        document.getElementById("date").innerHTML = Date();
+        var today = new Date();
+
+        var time =
+          today.getHours() +
+          ":" +
+          today.getMinutes() +
+          ":" +
+          today.getSeconds();
+
+        document.getElementById("Date").innerHTML = dateTime;
+      </script>
+      <br />
+    </header>
+
+    <div class="container">
+      <br />
+      <h2>
+        Chat with your colleagues
+      </h2>
+
+      <h3>
+        Find the best time with meowbot
+      </h3>
+
+      <p>
+        You can text or use the microphone.
+      </p>
+      <br />
+      <!-- chatbot -->
+      <iframe
+        allow="microphone;"
+        width="350"
+        height="430"
+        src="https://console.dialogflow.com/api-client/demo/embedded/8ba3a1f5-e70a-4e97-b7cc-9b6dc5f3448a"
+      >
+      </iframe>
+
+      <br />
+    </div>
+  </body>
+</html>
